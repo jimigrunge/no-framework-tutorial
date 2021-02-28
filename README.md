@@ -1,3 +1,11 @@
+Because this tutorial was so well-received, it inspired me to write a book. The book is a much more up to date version of this tutorial and covers a lot more. Click the link below to check it out (there is also a sample chapter available).
+
+### [Professional PHP: Building maintainable and secure applications](http://patricklouys.com/professional-php/)
+
+![](http://patricklouys.com/img/professional-php-thumb.png)
+
+The tutorial is still available in it's original form below.
+
 ## Create a PHP application without a framework
 
 ### Introduction
@@ -10,7 +18,7 @@ I saw a lot of people coming into the Stack Overflow PHP chatroom and asking if 
 
 So my goal with this is to provide an easy resource that people can be pointed to. In most cases a framework does not make sense and writing an application from scratch with the help of some third party packages is much, much easier than some people think.
 
-**This tutorial was written for PHP 5.5 or newer versions.** If you are using an older version, please upgrade it before you start. I recommend that you use the [current stable version](http://php.net/downloads.php).
+**This tutorial was written for PHP 7.0 or newer versions.** If you are using an older version, please upgrade it before you start. I recommend that you use the [current stable version](http://php.net/downloads.php).
 
 So let's get started right away with the [first part](01-front-controller.md).
 
@@ -27,3 +35,4 @@ So let's get started right away with the [first part](01-front-controller.md).
 9. [Templating](09-templating.md)
 10. [Dynamic Pages](10-dynamic-pages.md)
 11. [Page Menu](11-page-menu.md)
+12. [Frontend](12-frontend.md)

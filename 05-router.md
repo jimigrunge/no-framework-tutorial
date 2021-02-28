@@ -12,7 +12,7 @@ Alternative packages: [symfony/Routing](https://github.com/symfony/Routing), [Au
 
 By now you know how to install Composer packages, so I will leave that to you.
 
-Now add this code block to your `Bootstrap.php` file where you added the 'hello world' message in the last part.
+Now add this code block to your `Bootstrap.php` file where you added the 'hello world' message in the last chapter.
 
 ```php
 $dispatcher = \FastRoute\simpleDispatcher(function (\FastRoute\RouteCollector $r) {
@@ -42,14 +42,14 @@ switch ($routeInfo[0]) {
 }
 ```
 
-In the first part of the code, you are registering the available routes for you application. In the second part, the dispatcher gets called and the appropriate part of the switch statement will be executed. If a route was found, the handler callable will be executed.
+In the first part of the code, you are registering the available routes for your application. In the second part, the dispatcher gets called and the appropriate part of the switch statement will be executed. If a route was found, the handler callable will be executed.
 
 This setup might work for really small applications, but once you start adding a few routes your bootstrap file will quickly get cluttered. So let's move them out into a separate file.
 
 Create a `Routes.php` file in the `src/` folder. It should look like this:
 
 ```php
-<?php
+<?php declare(strict_types = 1);
 
 return [
     ['GET', '/hello-world', function () {
@@ -61,7 +61,7 @@ return [
 ];
 ```
 
-Now let's rewrite the route collection part to use the `Routes.php` file.
+Now let's rewrite the route dispatcher part to use the `Routes.php` file.
 
 ```php
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
@@ -75,5 +75,7 @@ $dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback);
 ```
 
 This is already an improvement, but now all the handler code is in the `Routes.php` file. This is not optimal, so let's fix that in the next part.
+
+Don't forget to commit your changes at the end of each chapter.
 
 [<< previous](04-http.md) | [next >>](06-dispatching-to-a-class.md)
